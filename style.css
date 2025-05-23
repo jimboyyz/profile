@@ -1,0 +1,400 @@
+/* Reset dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #0a0a0a; /* Hitam pekat */
+  color: #eee;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* LINK warna utama */
+a {
+  color: #c9a22a; /* gold */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #a34848; /* maroon */
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a1a; /* hampir hitam */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  z-index: 1000;
+  border-bottom: 3px solid #c9a22a; /* garis gold */
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a34848; /* maroon */
+  letter-spacing: 2px;
+}
+
+.navbar a {
+  margin-left: 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #eee;
+  position: relative;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: #59a05f; /* hijau segar */
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #59a05f; /* hijau */
+  transition: 0.3s;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+/* MENU ICON */
+#menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #c9a22a; /* gold */
+  cursor: pointer;
+}
+
+/* HOME SECTION */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rem 8rem 5rem 8rem;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #a34848 30%, #1a3a59 70%); /* maroon ke biru */
+  color: #fff;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #c9a22a; /* gold */
+  letter-spacing: 3px;
+}
+
+.home-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #59a05f; /* hijau */
+}
+
+.home-content p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.social-media a {
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: #eee;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #c9a22a; /* gold */
+}
+
+.home-img img {
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(201, 162, 42, 0.7);
+}
+
+/* ABOUT SECTION */
+.about {
+  display: flex;
+  padding: 6rem 8rem;
+  background-color: #121212;
+  gap: 5rem;
+  color: #eee;
+  align-items: center;
+}
+
+.about-img img {
+  width: 300px;
+  border-radius: 20px;
+  border: 4px solid #a34848; /* maroon border */
+  box-shadow: 0 8px 25px #594a0f;
+}
+
+.about-content h2 {
+  font-size: 2.8rem;
+  color: #c9a22a; /* gold */
+  margin-bottom: 0.5rem;
+}
+
+.about-content h3 {
+  font-size: 1.5rem;
+  color: #59a05f; /* hijau */
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #a34848; /* maroon */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 0 10px #a34848aa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #c9a22a; /* gold */
+  color: #000;
+  box-shadow: 0 0 15px #c9a22a;
+}
+
+/* SERVICES (QUESTION) */
+.services {
+  padding: 6rem 8rem;
+  background: #1a1a1a;
+  color: #eee;
+  text-align: center;
+}
+
+.services h2.heading,
+.services h3.heading {
+  color: #c9a22a; /* gold */
+  margin-bottom: 1rem;
+}
+
+.services h3.heading {
+  color: #59a05f; /* hijau */
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.services-box {
+  background-color: #222;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 10px #a34848aa;
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #c9a22a;
+}
+
+.services-box i {
+  font-size: 3rem;
+  color: #59a05f;
+  margin-bottom: 1rem;
+}
+
+.services-box h3 {
+  margin-bottom: 1rem;
+  color: #c9a22a;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.services-box p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* PORTFOLIO (PROJECTS) */
+.portfolio {
+  padding: 6rem 8rem;
+  background: linear-gradient(135deg, #1a3a59, #a34848);
+  color: #eee;
+}
+
+.portfolio h2.heading {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #c9a22a;
+  margin-bottom: 3rem;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(163, 72, 72, 0.7);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-box:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.portfolio-box:hover img {
+  filter: brightness(1);
+}
+
+.portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.85));
+  width: 100%;
+  color: #c9a22a;
+  padding: 1rem 1.5rem;
+  border-radius: 0 0 20px 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  opacity: 1;
+}
+/* Navbar berubah warna saat scroll */
+.scroll-header {
+  background-color: #1a3a59; /* biru navy */
+  box-shadow: 0 4px 15px rgba(201, 162, 42, 0.5);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Menu icon toggle style */
+#menu-icon.bx-x {
+  color: #c9a22a; /* gold */
+  transform: rotate(90deg);
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+/* Navbar mobile active */
+.navbar.active {
+  right: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.portfolio-layer h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.portfolio-layer p {
+  font-size: 1rem;
+  color: #59a05f;
+}
+
+/* BLOG SECTION */
+.blog {
+  background: #121212;
+  padding: 6rem 8rem;
+  color: #eee;
+}
+
+.blog h2.heading {
+  text-align: center;
+  font-size: 2.8rem;
+  color: #c9a22a;
+  margin-bottom: 3rem;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.blog-post {
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #a34848aa;
+  transition: box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  box-shadow: 0 0 25px #c9a22a;
+}
+
+.blog-post h3 {
+  margin-bottom: 1rem;
+  color: #c9a22a;
+}
+
+.blog-post p {/* Navbar berubah warna saat scroll */
+.scroll-header {
+  background-color: #1a3a59; /* biru navy */
+  box-shadow: 0 4px 15px rgba(201, 162, 42, 0.5);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Menu icon toggle style */
+#menu-icon.bx-x {
+  color: #c9a22a; /* gold */
+  transform: rotate(90deg);
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+/* Navbar mobile active */
+.navbar.active {
+  right: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+  font-size:
+}
